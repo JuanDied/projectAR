@@ -1,29 +1,58 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title >OUTWORLD</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='assets/css/tabares.css'>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galaxy</title>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
     
-</head>
+    </head>
+
+<body style='margin : 0px; overflow: hidden;'>
+
+    <a-scene embedded arjs='sourceType: webcam;'>
+        
+        <a-marker preset='hiro'>
+            <a-entity>
+                <!--a-entity position='0 0 0'  rotation="0 0 0" animation="property: rotation; to: 0 360.9 0; loop: true; dur: 5000; dir: normal "-->
+                        <a-sphere src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="0.5" position="0 0.1 0" segments-height="53" rotation='0 0 0'>
+                            <!--a-animation attribute="rotation"
+                                 dur="1000"
+                                 
+                                 to=to: 0 360 0;
+                                 dir='normal'
+                                   loop='true'
+                                 repeat="indefinite"></a-animation-->
+                        </a-sphere>
+                    </a-entity>
+        </a-marker>
+        
+        <a-marker preset='kanji'>
+            <a-entity>
+                <!--a-entity position='0 0 0'  rotation="0 0 0" animation="property: rotation; to: 0 360.9 0; loop: true; dur: 5000; dir: normal "-->
+                        <a-sphere  material='color: red;' radius="0.5" position="0 0.1 0" segments-height="53" rotation='0 0 0'>
+                            <!--a-animation attribute="rotation"
+                                 dur="1000"
+                                 
+                                 to=to: 0 360 0;
+                                 dir='normal'
+                                   loop='true'
+                                 repeat="indefinite"></a-animation-->
+                        </a-sphere>
+                    </a-entity>
+        </a-marker>
 
 
-<body >
-    <div class="top" >
-    <p class="titlebody" >REEL</p>
-    <p id="sinopsis">Esto es un videoReel, 
-        esta casa es apropiada para cualquier amante de deportes extremos como Bmx, skate etc.
-    </p>
-</div>
-    <div class=divid>
-          <video id="videos" src="assets/media/videoTabares.mp4" controls 
-        height="480px" width="720px" >   
-    </video>
-</div>
+        
 
-  
-    
+        <a-entity camera></a-entity>
+
+    </a-scene>
+
 </body>
 </html>
