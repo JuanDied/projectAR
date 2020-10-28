@@ -41,8 +41,8 @@
 
     <a-marker-camera preset='hiro'>
                       
-      <!--a-entity position='0 0 0'  rotation="0 0 0" animation="property: rotation; to: 0 360.9 0; loop: true; dur: 5000; dir: normal "-->
-      <a-entity position='0 0 0'  rotation="0 0 0">
+      <a-entity position='0 0 0'  rotation="0 0 0" animation="property: rotation; to: 0 360.9 0; loop: true; dur: 5000; dir: normal ">
+      <!--a-entity position='0 0 0'  rotation="0 0 0"-->
           <a-sphere  src="#sol" radius="1" position="0 0.1 0" segments-height="53" rotation='0 0 0'>
                                      
             <a-marker preset='kanji'>
@@ -55,7 +55,7 @@
                                  loop='true'
                                repeat='indefinite'></a-animation>
 
-                      <a-sphere src="#tierra" radius="0.5" position="0 0.1 0" segments-height="53" rotation='0 0 0' animation="property: rotation; to: 0 360.9 0; loop: true; dur: 5000; dir: normal ">
+                      <a-sphere src="#tierra" radius="0.5" position="0 0.1 1" segments-height="53" rotation='0 0 0' animation="property: rotation; to: 0 360.9 0; loop: true; dur: 5000; dir: normal ">
                         <!--a-sphere  material='color: blue' radius="0.5" position='0 0.1 0' segments-height="53" rotation='0 0 0'-->
                           
 
@@ -80,7 +80,7 @@
                                                
      <!--a-marker type="pattern" url="pattern/hoja.patt"-->
       <a-marker type='barcode' value='5'>
-      <a-sphere  src='#marte' radius="0.5" position='0 0.1 0' segments-height="53" rotation='0 0 0' animation="property: rotation; to: 0 360.9 0; loop: true; dur: 5000; dir: normal ">
+      <a-sphere  src='#marte' radius="0.5" position='0 0.1 1.5' segments-height="53" rotation='0 0 0' animation="property: rotation; to: 0 360.9 0; loop: true; dur: 5000; dir: normal ">
              
              <a-sphere src='#luna' radius="0.2" position='1 0.1 0' segments-height="53" rotation='0 0 0'>
               <a-animation attribute="rotation"
@@ -99,7 +99,7 @@
 
            <!--a-marker type="pattern" url="pattern/Hochbau.patt"-->
             <a-marker type='barcode' value='6'>
-            <a-sphere  src='#jupiter' radius="0.5" position='0 0.1 0' segments-height="53" rotation='0 0 0'>
+            <a-sphere  src='#jupiter' radius="0.5" position='0 0.1 2' segments-height="53" rotation='0 0 0'>
             <a-animation attribute="rotation"
             dur="1000"
             
