@@ -16,7 +16,7 @@
 
 <body style='margin : 0px; overflow: hidden;'>
 
-    <a-scene embedded arjs='sourceType: webcam;'>
+    <a-scene embedded arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
 
       <a-assets>
@@ -55,19 +55,13 @@
                                  loop='true'
                                repeat='indefinite'></a-animation>
 
-                      <a-sphere src="#tierra" radius="0.5" position="0 0.1 0" segments-height="53" rotation='0 0 0'>
+                      <a-sphere src="#tierra" radius="0.5" position="0 0.1 0" segments-height="53" rotation='0 0 0' animation="property: rotation; to: 0 360.9 0; loop: true; dur: 5000; dir: normal ">
                         <!--a-sphere  material='color: blue' radius="0.5" position='0 0.1 0' segments-height="53" rotation='0 0 0'-->
-                          <a-animation attribute="rotation"
-                               dur="1000"
-                               
-                               to="0 360 0"
-                               dir='normal'
-                                 loop='true'
-                               repeat='indefinite'></a-animation>
+                          
 
                                <!--LUNA DE LA TIERRA-->
 
-                                <a-sphere src='#luna' radius="0.2" position='0.1 0.1 0' segments-height="53" rotation='0 0 0'>
+                                <a-sphere src='#luna' radius="0.2" position='1 0.1 0' segments-height="53" rotation='0 0 0'>
                                   <a-animation attribute="rotation"
                                   dur="1000"
                                   
@@ -84,18 +78,13 @@
 
 
                                                
-     <a-marker type="pattern" url="pattern/hoja.patt">
-      <a-sphere  src='#marte' radius="0.5" position='0 0.1 0' segments-height="53" rotation='0 0 0'>
-             <a-animation attribute="rotation"
-             dur="1000"
+     <!--a-marker type="pattern" url="pattern/hoja.patt"-->
+      <a-marker type='barcode' value='5'>
+      <a-sphere  src='#marte' radius="0.5" position='0 0.1 0' segments-height="53" rotation='0 0 0' animation="property: rotation; to: 0 360.9 0; loop: true; dur: 5000; dir: normal ">
              
-             to="0 360 0"
-             dir='normal'
-               loop='true'
-             repeat='indefinite'></a-animation>
-             <a-sphere src='#luna' radius="0.2" position='0.1 0.1 0' segments-height="53" rotation='0 0 0'>
+             <a-sphere src='#luna' radius="0.2" position='1 0.1 0' segments-height="53" rotation='0 0 0'>
               <a-animation attribute="rotation"
-              dur="1000"
+              dur="5000"
               
               to="0 360 0"
               dir='normal'
@@ -108,7 +97,8 @@
                                    
     </a-marker> <!--MARKADOR MARTE CON LUNA  -->
 
-           <a-marker type="pattern" url="pattern/Hochbau.patt">
+           <!--a-marker type="pattern" url="pattern/Hochbau.patt"-->
+            <a-marker type='barcode' value='6'>
             <a-sphere  src='#jupiter' radius="0.5" position='0 0.1 0' segments-height="53" rotation='0 0 0'>
             <a-animation attribute="rotation"
             dur="1000"
